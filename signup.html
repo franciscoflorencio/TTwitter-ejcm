@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TTwitter</title>
+    <link href="signup.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link href="../Images/logo_tt.png" rel="icon" type="imagem/png">
+  </head>
+  <body>
+    <div class="form-container">
+      <form class="signup-form">
+        <h2 class="cadastro">Cadastro</h2>
+        <div class="label-input">
+          <label for="nome">Nome</label>
+          <input type="text" name="nome" placeholder="nome de usuário" required>
+        </div>
+        
+        <div class="label-input">
+          <label for="email">Email</label>
+          <input type="email" name="email" placeholder="example@gmail.com" required>
+        </div>
+
+        <div class="label-input">
+          <label for="data-de-nascimento">Data de Nascimento</label>
+          <input type="text" onmouseover="xDate()" id="date" name="data-de-nascimento" pattern="\d{2}/\d{2}/\d{4}" placeholder="xx/xx/xxxx" required>
+        </div>
+
+        <div class="label-input">
+          <label for="senha">Senha</label>
+          <input class="password" type="password" name="senha" placeholder="⬤  ⬤  ⬤  ⬤  ⬤  ⬤  ⬤  ⬤  ⬤" required>
+          <img src="Images/eye.png" class="toggle-password" id="senha" onclick="togglePassword(0)" alt="eye to see/unsee password">
+        </div>
+
+        <div class="label-input">
+          <label for="confirmar-senha">Confirmar senha</label>
+          <input class="password" type="password" name="confirmar-senha" placeholder="⬤  ⬤  ⬤  ⬤  ⬤  ⬤  ⬤  ⬤  ⬤" required>
+          <img src="Images/eye.png" class="toggle-password" id="confirmar-senha" onclick="togglePassword(1)" alt="eye to see/unsee password">
+        </div>
+
+        <div class="term-checkbox">
+          <input type="checkbox" name="checkbox-terms" required>
+          <label class="terms" for="checkbox-terms">Li e estou de acordo com os <u>Termos</u> <br>e <u>Condições de uso</u>.</label>
+        </div>
+
+        <input id="redirect-btn" class="main-button" onclick="changePage()" type="submit" name="Cadastrar" value="Cadastrar">
+        <br>
+      </form>
+      <a class="change-to-login" href="signin.html">Fazer Login</a>
+    </div> 
+
+    <img class="logo" src="Images/bigTTlogo.png" alt="logo grande do TTwitter">
+  <script src="scripts.js"></script>
+  </body>
+</html>

@@ -1,0 +1,572 @@
+body {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  position: relative;
+  flex-wrap: wrap;
+  font-family: "Inter", sans-serif;
+  background-color: #181b24;
+  margin: 0;
+}
+
+/* Nav */
+  .menu {
+    top: 0;
+    left: 0;
+    position: sticky;
+    display: flex;
+    flex-direction: row;
+    /*Distância da logo para o input*/
+      gap: 3%;
+    background-color: #14161D;
+    width: 100%;
+    height: 5.938rem;
+    z-index: 1;
+    margin-bottom: 5%; /*Tava 10.4%, mas achei muito. */
+  }
+
+  #logo{
+    position:relative;
+    width: 3.75rem;
+    height: 3.897rem;
+    top: 1rem;
+    left: 2.688rem;
+  }
+
+  #search-bar{
+    position: relative;
+    /*Tamanho da Search Bar*/
+      width: 45%;
+    display: flex;
+    align-items: stretch;
+    height: 2.188rem;
+    top: 1.875rem;
+    left: 11.5rem;
+    box-sizing: border-box;
+    background-color: #1f2025;
+    border-radius: 1.563rem;
+  }
+
+  .menu input{
+    color: white;
+    position:relative;
+    display: flex;
+    flex:1;
+    background-color: #1f2025;
+    width: 100%;
+    height: 2.188rem;
+    border-radius: 1.563rem;
+    border: none;
+    font-family: "Inter", sans-serif;
+    font-size: 1.25rem;    
+    padding-left: 1.25rem;
+    outline: none;
+
+    /* X do input pode ser removido com:
+      [type="search"]::-webkit-search-cancel-button { appearance: none;}
+    */
+  }
+
+  .menu input:placeholder-shown{
+    color: #FFFFFF;
+    font-family: "Inter", sans-serif;
+    font-size: 1.25rem;
+    padding-left: 1.25rem;
+  }
+
+  #lupa{
+    display: flex;
+    position: relative;
+    border: none;
+    outline: 0;
+    width: 1.563rem;
+    height: 1.476rem;
+    /* Distância da Lupa das Bordas */
+      padding-right: 1.25rem;
+      padding-top: 0.44rem;
+    cursor: pointer;
+  }
+
+/* Sidebar */
+  .sidebar{
+    display: flex;
+    padding-left: 2.5%;
+    align-items: center;
+    gap: 1.5rem;
+    flex-direction: column;
+  }
+
+
+
+/*Sugestões */
+
+  .sugestoes{
+    padding-right: 2.5%;
+    font-family: "Inter", sans-serif;
+    color: white;
+    display: flex;
+    align-items: right;
+    width: 19.4375rem;
+    height: 23.125rem;
+    flex-direction: column;
+  }
+
+  .add-btn{
+    margin-left: 6rem;
+  }
+
+
+  h3{
+    font-size: 1.5rem;
+    margin-bottom: 2%;
+    margin-top: 0;
+    font-weight: normal;
+  }
+
+  .usuarios{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .usuario-sugerido{
+    display:flex;
+    align-items: center;
+  }
+
+  .usuario-sugerido:last-child{
+    margin-bottom: 0;
+  }
+
+  .usuario-sugerido img{
+    width: 3.125rem;
+    height: 3.125rem;
+    border-radius: 50%;
+    margin-right: 0.625rem;
+  }
+
+  .usuario-sugerido p{
+    flex-grow: 1;
+    font-size: 1.25rem;
+    /* margin-right: 6rem; */
+  }
+
+  .usuario-sugerido button{
+    border-radius: 0.9375rem;
+    background-color: #222222;
+    color: #259bf1;
+    width: 5.625rem;
+    height: 2.2225rem;
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    box-shadow: none;
+  }
+
+/* Main */
+
+  .container{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  main{
+    flex-direction: column;
+    position: relative;
+    font-family: "Inter", sans-serif;
+    color: white;
+    display: flex;
+    align-items: center;
+    z-index: 0;
+    height: 8.875rem;
+    gap: 1.875rem;
+  }
+
+  .timeline-novo-post{
+    width: 37.5rem;
+    height: 6.25rem;
+    flex-shrink: 0;
+    border-radius: 0.625rem;
+    border: 0.0625rem solid #484848;
+    background: var(--Quaternria, #181B24);
+    display: flex;
+    gap: 1.25rem;
+    flex-direction: column;
+    padding: 1.25rem 1.875rem 1.25rem 1.875rem;
+    justify-content: space-between;
+    font-family: Arial, sans-serif;
+    border: 0.0625rem solid #484848;
+  }
+
+  .timeline-novo-post-texto{
+    background: #181B24;
+    opacity: 1;
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 0.3125rem;
+    width: 100%;
+  }
+
+  .timeline-novo-post-texto::placeholder{
+    font-size: 0.90rem;
+    color: white;
+    font-family: "Inter", sans-serif;
+  }
+
+  .timeline-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 37.5rem;
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.6875rem;
+  }
+
+  .timeline{
+    display: flex;
+    flex-direction: column;
+    gap:1.25rem;
+  }
+
+  .post-pic{
+    max-width: 31.25rem;
+  }
+
+  .timeline-post{
+    border-radius: 0.9375rem;
+    border: 0.0625rem solid #484848;
+    padding: 2.9375rem 5.1rem 0.625rem 5.1rem;
+  }
+
+  .timeline-post > p{
+    width: 28.9375rem;
+    height: 2.4375rem;
+    flex-shrink: 0;
+  }
+
+  #btn-postar{
+    width: 6.125rem;
+    height: 2.5rem;
+    border-radius: 0.625rem;
+    font-family: "Inter", sans-serif;
+    font-size: 0.75rem;
+    font-style: normal;
+    color: black;
+    font-weight: 600;
+    line-height: normal;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    box-shadow: none;
+    background-color: #22A2F2;
+  }
+
+  .small-items{
+    display: flex;
+    gap: 0.625rem;
+  }
+
+  .small-items > button{
+    flex-direction: row;
+    margin:0;
+    padding: 0;
+    align-items: center;
+    background: none;
+    border: none;
+    outline: none;
+  }
+
+  #label-btn-1 {
+      margin: 0.3125rem 0 0 0.3125rem;
+  }
+
+  #btn-1 {
+      width: 0;
+  }
+
+  #btn-2{
+    display: flex;
+    position: relative;
+    right: 0.3125rem;
+  }
+
+  #btn-3{
+    top: 0.125rem;
+  }
+
+  .new-post-btns{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .post-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .reactions{
+    display: flex;
+    position: relative;
+    align-items: flex-end;
+    gap: 1.125rem;
+    left: 6rem;
+    width: 50%;
+    height: 50%;
+  }
+
+@media screen and (max-width: 47.9375rem){
+
+  body {
+    height: 100%;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+  /* Busca */
+
+    .menu{
+      margin-bottom: 0;
+      flex-shrink: 0;
+    }
+    
+    #search-bar{
+      /*Tamanho e distância da search bar*/
+        left: 8%;
+        width: 68%;
+    }
+
+    #logo{
+      left: 5%;
+    }
+
+  /* Principal */
+
+    .container {
+      flex-wrap: wrap;
+      justify-content: center;
+      flex-grow: 1;
+      height: 100%;
+    }
+
+    main{
+      flex-direction: row;
+      flex-wrap: wrap;
+      height: auto;
+    }
+
+    .timeline{
+      width: 100%;
+    }
+    
+    .timeline-novo-post{
+      position: relative;
+      padding: 0;
+      top: 8%;
+      left: 0%;
+      width: 75%;
+      height: 20%;
+      flex-shrink: 0;
+      border-radius: 0.625rem;
+      border: 0.0625rem solid #2F2F2F;
+      background: var(--Quaternria, #181B24);
+    }
+
+    .timeline-container{
+      width: 75%;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .timeline-post{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      flex-shrink: 0;
+      border-radius: 0.9375rem;
+      justify-content: space-around;
+      border: 0.09375rem solid #2F2F2F;
+      background: var(--Quaternria, #181B24);
+      padding: 0;
+    }
+
+    .timeline-post > img {
+      display: flex;
+      max-width: 75%;
+      object-fit: contain;
+      align-self: center;
+      padding-top: 35px;
+      padding-bottom: 5px;
+      
+    }
+
+    .timeline-post p {
+      flex-shrink: 1;
+      width: 70%;
+    }
+
+    .timeline-novo-post-texto{
+      padding-top: 5%;
+      padding-left: 5%;
+      font-size: smaller;
+      width: auto;
+    }
+
+    #btn-postar{
+      height: 75%;
+      width: 25%;
+      margin-bottom: 5%;
+      margin-right: 5%;
+      padding: 2.5%;
+      font-weight: bold;
+    }
+
+    .small-items {
+      padding-left: 5%;
+      padding-bottom: 5%;
+    }
+
+    .reactions{
+      display: flex;
+      position: relative;
+      width: 75%;
+      height: 90%;
+      gap: 5px;
+      /* Distância dos icones da imagem do usuario do post */
+        left: 6%;
+    }
+
+    .reactions img{
+      max-width: 25px !important;
+      max-height: 25px !important;
+    }
+
+    .post-header{
+      display: flex;
+      flex-direction: row;
+      margin-right: 10%;
+      /* Distância da foto do usuário*/
+      padding-bottom: 5%;
+    }
+
+    /* Sugestões */
+
+      .sugestoes{
+        position: relative;
+        display: flex;
+        top: 0rem;
+        padding-right: 0;
+        justify-content: center;
+        text-align: center;
+        flex-direction: row;
+        width: 100%;
+        height: 100%;
+        flex-grow: 1;
+        align-content: flex-start;
+        flex-wrap: wrap;
+        margin-bottom: 10%;
+      }
+
+      h3 {
+        display: flex;
+        position: relative;
+        /*Distância do texto ao topo*/
+          top: 15%;
+        left: 1.25rem;
+        font-size: 1.75rem;
+        width: 100%;
+
+      }
+
+      /*Modificam o texto de forma responsiva*/
+
+        #texto-usuarios::before {
+          content: "Talvez você conheça";
+        }
+
+        #texto-usuarios > span {
+          display: none;
+        }
+
+      /* --------------------------------------- */
+
+      .usuario-sugerido {
+        position: relative;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      
+      .usuario {
+        flex-wrap: nowrap !important;
+      }
+
+      .usuario-sugerido > button{
+        display: none;
+      }
+
+      .usuario-sugerido img{
+        max-width: 100px;
+        max-height: 100px;
+        margin-right: 0;
+        align-self: center;
+      }
+
+      .usuario img {
+        max-width: 35px !important;
+        max-height: 35px !important;
+      }
+
+      .usuario-sugerido span{
+        font-size: medium ;
+        flex-grow: 1;
+      }
+
+      .usuario-sugerido p{
+        font-size: medium;
+        flex-grow: 1;
+      }
+
+      .usuarios{
+        position: relative;
+      }
+
+      .usuarios-sugeridos{
+        top: 18%;
+        left: auto;
+        right: auto;
+        display: flex;
+        position: relative;
+        gap: 1rem;
+        flex-direction: row;
+        justify-content: center;
+        align-self: center;
+      }
+
+      .usuarios-mobile{
+        position: relative;
+        display: flex;
+        top: 3.75rem;
+        left: 2.1875rem;
+        gap: 1.4375rem;
+        flex-direction: row;
+        justify-content: center;
+        align-self: center;
+      }
+
+      .sidebar{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        position: sticky;
+        background-color: #14161D;
+        height: 8%;
+        padding: 2.5%;
+      }
+
+
+}

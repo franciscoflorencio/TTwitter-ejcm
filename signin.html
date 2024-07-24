@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link href="signin.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="images">
+      <img class="logo" src="Images/bigTTlogo.png" alt="logo do TTwitter">
+    </div>
+
+    <div class="form-container">
+      <form class="signup-form">
+        <h2 class="cadastro">Bem vindo a plataforma TTwitter</h2>
+
+        <div class="label-input">
+          <label for="email">Email</label>
+          <input type="email" name="email" placeholder="example@gmail.com" required>
+        </div>
+
+        <div class="label-input">
+          <label for="senha">Senha</label>
+          <input class="password" type="password" name="senha" placeholder="⬤  ⬤  ⬤  ⬤  ⬤  ⬤  ⬤  ⬤  ⬤" required>
+          <img src="Images/eye.png" class="toggle-password" id="senha" onclick="togglePassword()" alt="eye to see/unsee password">
+        </div>
+        <p id="forgot">Esqueci minha senha</p>
+        <input id="redirect-btn" class="main-button" onclick="changePage()" type="submit" name="Entrar" value="Entrar">
+        <br>
+      </form>
+      <a class="change-to-login" href="signup.html">Registrar</a>
+      <div class="terms">
+          <center>Li e estou de acordo com os <u>Termos</u> e <u>Condições de <br>uso</u>.</center>
+      </div>
+      <div class="terms-mobile">
+        <center>Li e estou de acordo com os <u>Termos</u> e <br><u>Condições de uso</u>.</center>
+      </div>
+    </div> 
+  <script src="scripts.js"></script>
+  </body>
+</html>
